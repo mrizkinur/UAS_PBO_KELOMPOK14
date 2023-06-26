@@ -1,4 +1,4 @@
-packageackage RotiTawar;
+package RotiTawar;
 import Modal.RotiTawar;
 import Harga.Interface;
 

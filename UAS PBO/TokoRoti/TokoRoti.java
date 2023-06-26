@@ -1,8 +1,8 @@
 package TokoRoti;
-import rotimanis.*;
-import rotitawar.*;
-import pizza.*;
-import beban.BebanBahan;
+import RotiManis.*;
+import RotiTawar.*;
+import Pizza.*;
+import Beban.BebanBahan;
 
 public class TokoRoti{
     public static void main(String[] args) {
