@@ -13,27 +13,29 @@ public class RotiTawarV1 extends RotiTawar implements Interface {
     }
 
     @Override
-    public double filling() {
-        double coklat  = this.hargaCoklat() * 80;
+    public double filing() {
+        double coklat  = this.modal_coklat() * 80;
         double harga = coklat;
         return harga;
     }
 
     @Override
     public double modal() {
-        double hargaTopFill = this.filling() + this.topping();
+        double hargaTopFill = this.filing() + this.topping();
         double hargaBahan = this.hitungModal() / this.rotiPerAdonan();
         double totalModal = hargaBahan + hargaTopFill;
         return totalModal;
     }
-    
-    public double hargaVarian(){
+
+    @Override
+    public int harga_varian() {
         double untung = this.modal() * 50/100;
         double harga = this.modal() + untung;
-        return Math.round(harga);
+        return (int) Math.round(harga);
     }
-    
-    public void harga(){
-        System.out.println("Harga " + nama  + " = Rp " + (int)hargaVarian() + " /pcs");
+
+    @Override
+    public void harga_roti() {
+        System.out.println("Harga " + nama + " = Rp " + (int) harga_varian() + " /pcs");
     }
 }

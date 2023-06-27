@@ -5,32 +5,34 @@ import Harga.Interface;
 public class RotiManisV3 extends RotiManis implements Interface {
     String nama = "Roti Manis Varian 3";
     
-    public double filling() {
-        double keju = this.hargaKeju() * 10;
-        double sosis  = this.hargaCoklat() * 10;
+    @Override
+    public double filing() {
+        double keju = this.modal_keju() * 10;
+        double sosis  = this.modal_coklat() * 10;
         double harga = keju + sosis;
         return harga;
     }
 
     public double modal() {
-        double hargaTopFill = this.filling();
+        double hargaTopFill = this.filing();
         double hargaBahan = this.hitungModal() / this.rotiPerAdonan();
         double modalTotal = hargaBahan + hargaTopFill;
         return modalTotal;
     }
     
-    public double hargaVarian(){
+    @Override
+    public int harga_varian() {
         double untung = this.modal() * 50/100;
         double harga = this.modal() + untung;
-        return Math.round(harga);
+        return (int) Math.round(harga);
     }
-    
-    public void harga(){
-        System.out.println("Harga " + nama  + " = Rp " + (int)hargaVarian() + " /pcs");
+
+    @Override
+    public void harga_roti() {
+        System.out.println("Harga " + nama + " = Rp " + (int) harga_varian() + " /pcs");
     }
 
     public double topping() {
         return 0.0;
     }
-    
 }

@@ -1,36 +1,36 @@
 package Komposisi;
 
-public class KomposisiRotiTawar{
+import Harga.HargaBahan;
+
+public class KomposisiRotiTawar extends HargaBahan implements BahanRoti{
 
     //Bahan membuat Roti Tawar
-    double tepung_terigu(){
+    public int tepung_terigu(){
         return 1000;
     }
-    double gula_pasir(){
+    public int gula_pasir(){
         return 125;
     }
-    double butter(){
+    public int butter(){
         return 100;
     }
-    int ragi(){
+    public int ragi(){
         return 20;
     }
-    double susu_bubuk(){
+    public int susu_bubuk(){
         return 250;
     }
-    double susu_cair(){
+    public int susu_cair(){
         return 200;
     }
-    int telur(){
+    public int telur(){
         return 70;
     }
-    int es_batu(){
+    public int es_batu(){
         return 300;
     }
-    double total_berat(){
+    @Override
+    public int hitungKomposisi() {
         return 2065;
-    }
-    int dough(){
-        return 400;
     }
 }

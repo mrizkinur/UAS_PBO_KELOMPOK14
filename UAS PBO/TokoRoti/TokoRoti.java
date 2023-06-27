@@ -1,8 +1,10 @@
 package TokoRoti;
-import RotiManis.*;
-import RotiTawar.*;
-import Pizza.*;
-import Beban.BebanBahan;
+import RotiTawar.RotiTawarV1;
+import RotiTawar.RotiTawarV2;
+import Pizza.PizzaV1;
+import RotiManis.RotiManisV1;
+import RotiManis.RotiManisV2;
+import RotiManis.RotiManisV3;
 
 public class TokoRoti{
     public static void main(String[] args) {
@@ -12,5 +14,20 @@ public class TokoRoti{
         RotiTawarV1 rt1 = new RotiTawarV1();
         RotiTawarV2 rt2 = new RotiTawarV2();
         PizzaV1 p1  = new PizzaV1();
+
+        rm1.pesanan = 50;
+        rm2.pesanan = 100;
+        rm3.pesanan = 70;
+        rt1.pesanan = 20;
+        rt2.pesanan = 15;
+        p1.pesanan = 10;
+
+        rm1.harga_roti();
+        rm2.harga_roti();
+        rm3.harga_roti();
+        rt1.harga_roti();
+        rt2.harga_roti();
+        p1.harga_roti();
+
         }
 }

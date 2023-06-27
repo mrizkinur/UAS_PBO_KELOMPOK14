@@ -1,9 +1,9 @@
 package Harga;
 
 public abstract interface Interface{
-    public int topping();
-    public int filing();
-    public int modal();
+    public double topping();
+    public double filing();
+    public double modal();
     public int harga_varian();
-    public int harga_isian();
+    public void harga_roti();
 }

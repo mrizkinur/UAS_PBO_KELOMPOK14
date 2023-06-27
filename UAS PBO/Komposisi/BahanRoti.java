@@ -1,6 +1,6 @@
 package Komposisi;
 
-public interface BahanRoti{
+public abstract interface BahanRoti{
     public int tepung_terigu();
     public int gula_pasir();
     public int butter();
@@ -9,5 +9,5 @@ public interface BahanRoti{
     public int susu_cair();
     public int telur();
     public int es_batu();
-    public int total_berat();
+    public int hitungKomposisi();
 }

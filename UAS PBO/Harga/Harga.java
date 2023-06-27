@@ -5,7 +5,7 @@ import Komposisi.TopFill;
 public class Harga implements TopFill{
     
     //Harga Bahan
-    int Harga_TepungTerigu(){
+    public int Harga_TepungTerigu(){
         return 40000;
     }
     int Harga_GulaPasir(){
